@@ -1,4 +1,72 @@
-html {
-  height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  margin: 0;
+  background-color: #202731;
+  color: white;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 20vw;
+  min-height: 400px;
+}
+
+.red {
+  background-color: #8D021F;
+}
+
+.curve {
+  position: absolute;
+  height: 225px;
   width: 100%;
+  bottom: 0;
+}
+
+.curve::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #202731;
+  transform: translate(85%, 60%);
+}
+
+.curve::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 39.3%;
+  width: 55%;
+  height: 100%;
+  background-color: #8D021F;
+  transform: translate(-2%, 40%);
+}
+
+h1.text1 {
+  font-size: 120px;
+  text-align: center;
+
+}
+
+.logos {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 160vh;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
 }
